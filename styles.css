@@ -7,9 +7,13 @@
     margin-top:4rem;
     text-align: center;
 }
+.rules{
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 1.5rem;
+}
 .gameBody{
     margin-top: 4rem;
-    border:2px solid red;
     display:flex;
     flex-direction: column;
     justify-content: center;
@@ -22,7 +26,7 @@
     width:6rem;
     height:6rem;
 }
-.gameBody .gameBody__guessColorContainer .gameBody__guessColorContainer__buttons--guessColor, .gameBody .gameBody__buttons--gameController{
+.gameBody .gameBody__guessColorContainer__buttons--guessColor, .gameBody .gameBody__buttons--gameController{
     font-size: 1rem;
     margin-right:0.4rem; 
     padding:0.3rem;
@@ -30,7 +34,6 @@
     border-radius: 0.2rem;
     background-color: white;
 }
-
-.gameBody .gameBody__guessColorContainer .gameBody__guessColorContainer__buttons--guessColor:hover, .gameBody .gameBody__buttons--gameController:hover{
+.gameBody .gameBody__guessColorContainer__buttons--guessColor:hover, .gameBody .gameBody__buttons--gameController:hover{
     background-color: lightgoldenrodyellow;
 }
