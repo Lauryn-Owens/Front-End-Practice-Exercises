@@ -31,4 +31,4 @@ Running the Game
 - Click the "New Game" button to reload the page and start a new game.
 
 Code Overview
-- The main functionality of the game is implemented in JavaScript within the script.js file. Here is an overview of the key functions:
+- The main functionality of the game is implemented in JavaScript within the script.js file.
