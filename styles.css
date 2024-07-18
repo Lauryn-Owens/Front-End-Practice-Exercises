@@ -1,0 +1,36 @@
+*,*::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.header{
+    margin-top:4rem;
+    text-align: center;
+}
+.gameBody{
+    margin-top: 4rem;
+    border:2px solid red;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:2rem;
+}
+.gameBody .gameBody__color{
+    border-radius: 0.5rem;
+    margin-top: 2rem;
+    width:6rem;
+    height:6rem;
+}
+.gameBody .gameBody__guessColorContainer .gameBody__guessColorContainer__buttons--guessColor, .gameBody .gameBody__buttons--gameController{
+    font-size: 1rem;
+    margin-right:0.4rem; 
+    padding:0.3rem;
+    letter-spacing: 0.1rem;
+    border-radius: 0.2rem;
+    background-color: white;
+}
+
+.gameBody .gameBody__guessColorContainer .gameBody__guessColorContainer__buttons--guessColor:hover, .gameBody .gameBody__buttons--gameController:hover{
+    background-color: lightgoldenrodyellow;
+}
