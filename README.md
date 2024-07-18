@@ -16,7 +16,7 @@ Installation
 
 bash
 Copy code
-- git clone https://github.com/yourusername/guess-the-color-game.git
+- git clone https://github.com/Lauryn-Owens/Front-End-Practice-Exercises.git
 Navigate to the project directory:
 
 bash
