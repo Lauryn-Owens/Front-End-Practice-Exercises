@@ -32,6 +32,3 @@ Running the Game
 
 Code Overview
 - The main functionality of the game is implemented in JavaScript within the script.js file. Here is an overview of the key functions:
-
-generateHexColor(): Generates a random hex color code.
-initializeGame(): Initializes the game
