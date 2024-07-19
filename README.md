@@ -1,6 +1,7 @@
 Guess the Color Game
 - This project is a simple browser-based game where the user has to guess the correct hex color code displayed on a colored box. The game dynamically generates hex color codes and updates the UI based on user interaction.
 
+- Deployed Link: https://colorgamelauryn.netlify.app/
 Features
 - Randomly generates a hex color code for the user to guess.
 - Displays the generated color as the background color of a box.
