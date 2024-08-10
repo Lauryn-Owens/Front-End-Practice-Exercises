@@ -3,31 +3,8 @@ import {cartContext} from "../../context/cartContext";
 
 import cartEmpty  from "../../../public/assets/images/illustration-empty-cart.svg";
 function CartListEmpty() {
-  const {state}  = useContext(cartContext);
-    const[cartQuantity, setCartQuantity] = useState(0); 
-    const[cartTotal, setCartTotal] = useState(0);
+  const {state,cartQuantity}  = useContext(cartContext);
     
-    const calculateCartQuantity =  () => {
-        let cartQuantity = 0;
-    state.cart.forEach((item) => {
-        cartQuantity += item.quantity;
-    })
-    setCartQuantity(cartQuantity);
-    return;
-  }
-    
-    const calculateCartTotal =  () => {
-        let cartTotal = 0;
-    state.cart.forEach((item) => {
-        cartTotal += item.price * item.quantity;
-    })
-    setCartTotal(cartTotal);
-    return;
-  }
-    useEffect(() => {
-        calculateCartQuantity();
-        calculateCartTotal();
-    },[state.cart]);
 
   return (
       <div>

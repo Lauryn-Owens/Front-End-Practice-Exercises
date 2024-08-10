@@ -1,11 +1,11 @@
 import React, { useContext } from 'react';
 import ReactDOM from 'react-dom';
-import checkmark from "../../../public/assets/images/icon-order-confirmed.svg";
+import checkmark from "../../../../public/assets/images/icon-order-confirmed.svg";
 import CartModalCard from './cartModalCard';
-import { cartContext } from '../../context/cartContext';
+import { cartContext } from '../../../context/cartContext';
 
 function CartModal({ displayHandler }) {
-  const { state, cartTotal, checkingOutHandler, dispatch } = useContext(cartContext);
+  const {cartTotal, checkingOutHandler, dispatch } = useContext(cartContext);
 
   return ReactDOM.createPortal(
     <div className=' p-12 lg:w-4/12 lg:h-max lg:absolute lg:z-1000 lg:top-1/2 lg:left-1/2 lg:transform lg:-translate-x-1/2 lg:-translate-y-1/2 bg-white rounded-lg'>
