@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mortgage Calculator</title>
+    <link rel="stylesheet" href="styles.css"></link>
+   
+</head>
+<body>
+    <main>
+        <section class="calculator">
+            <div class="calculator__left">
+                <header class="calculator__header">
+                    <hl class="calculator__header-title">
+                        Mortgage Calculator
+                    </hl>
+                    <button class="calculator__clear">
+                        Clear All
+                    </button>
+                </header>
+                <main class="calculator__main">
+                    <form class="calculator__form">
+                        <div class="calculator__amount-container">
+                            <label for="amount">Mortgage Amount</label>
+                            <div class="calculator__amount">
+                            <span class="calculator__amount-sym empty">&#36;</span>
+                            <input  id="calculator__amount"name="amount" type="number">
+                        </div>
+                        <p class="calculator__error">This field is required</p>
+                        </div>
+                        <div class="calculator__details-container">
+                            <div class="calculator__details">
+                                <label for="term" class="calculator_term">
+                                    Mortgage Term
+                                </label>
+                                <span class="calculator__details-input">
+                                    <input name="term" id="term" type="number"/>
+                                    <span class="empty">
+                                        years
+                                    </span>
+                                </span>
+                                <p class="calculator__error">This field is required</p>
+                            </div>
+                            
+                            <div class="calculator__details">
+                                <label for="interest" class="calculator_term">
+                                    Interest Rate
+                                </label>
+                                <span class="calculator__details-input">
+                                    <input   name="interest" id="interest"  type="number">
+                                    <span class="empty">
+                                        &#37; 
+                                    </span>
+                                </span>
+                                 <p class="calculator__error">This field is required</p>
+                            </div>
+                        </div>
+                        <h1 class="calculate--type">Mortgage Type</h1>
+                        <div class="calculator_type-container">
+                            <div class="calculator_type">
+                                <input value="repayment"id="repayment" name="type" for="repayment" type="radio">
+                                <label for="repayment" >Repayment</label>
+                            </div>
+                            <div class="calculator_type">
+                                <input  value="interest_only" id="interest_only" name="type" for="name_only"type="radio">
+                                <label for="interest_only" >Interest Only</label>
+                            </div>
+                        </div>
+                        <p class="calculator__error">This field is required</p>
+                    <button type="submit" id="calculate_button" class="calculator-calculate">
+                            <img src="./images/icon-calculator.svg" alt="calculator">
+                        Calculate Repayments</button>
+                    </form>
+                </main>
+            </div>
+            <div class="calculator__right">
+               <div class="calculator__right-unsubmitted">
+                    <img class="calculate__right-empty" src="./images/illustration-empty.svg" alt="illustration-empty icon">
+                    <h4 class="calculate__right-empty__header">
+                        Results shown here
+                    </h4>
+                    <p class="calculate__right-empty__text">
+                        Complete the form and click "calculate repayments" to
+                        see what your monthly repayments would be.
+                    </p>
+               </div>
+                <div class="calculate__right-hidden" >
+                <h1 class="calculator__right-header">Your results</h1>
+                <p class="calculator__right--text">Your results are shown below based on the information
+                    you provided. To adjust the results, edit the form and click 
+                    "calculate repayments" again.
+                </p>
+                <div class="calculator__right--repayments">
+                    <h5 class="calculator__right--header">Your monthly repayments</h5>
+                    <p class="calculator__right--repayment-number"><span>&#36;</span> <span id="repayment_monthly"></span></p>
+                    <hr>
+                    <p class="calculator__right--text">Total you'll repay over the term</p>
+                    <p class="calculator__right--number"><span>&#36;</span> <span id="repayment_total"></span></p>
+                </div>
+            </div>
+            </div>
+        </section>
+    </main>
+    <script defer src="scripts.js"></script>
+</body>
+</html>
