@@ -67,7 +67,7 @@ function renderTodos() {
         checkbox.type = 'checkbox';
         checkbox.checked = todo.completed;
         checkbox.classList.add('todo_list--item--checkbox');
-        checkbox.addEventListener('click', () => toggleTodoCompletion(todo.id));
+        checkbox.addEventListener('click', () => toggleCompletion(todo.id));
 
         // Text for the todo item
         const p = document.createElement('p');
