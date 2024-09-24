@@ -1,0 +1,72 @@
+*, *::after, *::before{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap:1.5rem;
+}
+.todo_header{
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    text-align: center;
+} 
+section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+section > *{
+    width:50%;
+}
+.todo_list--form{
+    margin-top: 2rem;
+}
+.todo_list--form--input{
+    border:3px solid hotpink;
+    padding:0.5rem;
+    border-radius: 0.2rem;
+    outline: none;
+}
+.todo_list--form--input--submit{
+    margin-left: 0.7rem;
+   padding:0.5rem;
+   background-color:hotpink;
+   border-radius: 0.2rem;
+   border: none;
+   outline: none;
+   font-weight: 800;
+    color:honeydew;  
+}
+.todo_list--form--input--submit:hover{
+    background-color: honeydew;
+    color:hotpink;
+}
+.todo_list{
+    text-align: center;
+}
+.todo_list--item{
+    display:flex;
+    align-items: center;
+    gap:1rem;
+    margin-top: 1.5rem;
+}
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+  }
+.todo_list--item--delete{
+    background-color: hotpink;
+    border-radius: 0.4rem;
+    padding: 0.3rem 0.5rem;
+    border: none;
+    outline:none;
+}
+.todo_list--item--delete:hover{
+    background-color:honeydew;
+}

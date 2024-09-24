@@ -3,10 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JS TEMPLATE</title>
-    <link href="styles.css"></link>
+    <title>TypeScript To Do List</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1 class="">Blank Template</h1>
+    <main>
+        <h1 class="todo_header">TypeScript To Do List</h1>
+        <section>
+            <!-- The form for adding new todos -->
+            <form id="todo_list--form" class="todo_list--form">
+                <input 
+                    type="text" 
+                    class="todo_list--form--input" 
+                    placeholder="Enter a new task" 
+                    >
+                <input 
+                    type="submit" 
+                    value="Add" 
+                    id="todo_list--form--input--submit" 
+                    class="todo_list--form--input--submit">
+            </form>
+
+            <!-- The todo list where todo items will appear -->
+            <ul class="todo_list"></ul>
+        </section>
+    </main>
+    <script type="text/javascript" src="scripts.js"></script>
 </body>
 </html>
