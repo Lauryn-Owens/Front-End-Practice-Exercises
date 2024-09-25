@@ -24,22 +24,22 @@ Features
 1. Clone the repository:
 
    bash
-   git clone https://github.com/Lauryn-Owens/Front-End-Practice-Exercises.git
+ - git clone https://github.com/Lauryn-Owens/Front-End-Practice-Exercises.git
 
 Navigate into the project directory:
 
 bash
-cd typescript-todo-app
+- cd typescript-todo-app
 
 Install dependencies:
 
 bash
-npm install
+- npm install
 Compile the TypeScript files to JavaScript:
 
 bash
-npm run build
+- npm run build
 Start the project locally:
 
 bash
-npm start
+- npm start
