@@ -1,49 +1,49 @@
-//create interface/type for todo items
-interface Todo{
-        id:number;
-        todo:string;
-        completed:boolean
+// Create interface/type for todo items
+interface Todo {
+    id: number;
+    todo: string;
+    completed: boolean;
 };
 
-//grab needed dom elements
-const todoInput = document.querySelector('.todo_list--form--input')  as HTMLInputElement;
+// Grab needed DOM elements
+const todoInput = document.querySelector('.todo_list--form--input') as HTMLInputElement;
 const todoAdd = document.querySelector('.todo_list--form--input--submit') as HTMLInputElement;
-const todoList = document.querySelector('.todo_list') as HTMLUListElement ;
-/**
- *const todoInput = document.querySelector('."todo_list--form--input') as HTMLInputElement | null;
-//const todoAdd = document.querySelector('.todo_list--form--input--submit') as HTMLInputElement | null;
-const todoList = document.querySelector('.todo_list') as HTMLUListElement | null;
+const todoList = document.querySelector('.todo_list') as HTMLUListElement;
 
- */
-//create todo array -- stores todo list items
-let todos:Todo[]= [];
+// Create todo array -- stores todo list items
+let todos: Todo[] = [];
 
-//add todos function
-function addTodo(todo:string){
-   const newTodo:Todo = {
+// Add todos function
+function addTodo(todo: string) {
+    const newTodo: Todo = {
         id: Date.now(),
-        todo:todo,
-        completed:false
-   };
-   todos.push(newTodo);
+        todo: todo,
+        completed: false
+    };
+    todos.push(newTodo);
     renderTodos();
 }
 
-//remove a todo function
-function removeTodo(id:number){
-    //update todos
+// Remove a todo function
+function removeTodo(id: number) {
+    // Update todos
     todos = todos.filter((todo) => {
         return todo.id !== id;
-    })
+    });
     renderTodos();
 }
 
-//toggle completion function
-function toggleCompletion(id:number){
-    todos.map((todo) => {
-        todo.id === id ? {...todo, completed: !todo.completed} : todo
+// Toggle completion function
+function toggleCompletion(id: number) {
+    // Update the todo's completed status
+    todos = todos.map(todo => {
+        if (todo.id === id) {
+            return { ...todo, completed: !todo.completed }; // Toggle completed status
+        }
+        return todo; // Return unmodified todo if it's not the one being toggled
     });
-    renderTodos();
+
+    renderTodos(); // Re-render the todos
 }
 
 // Render the list of todos
@@ -73,6 +73,14 @@ function renderTodos() {
         const p = document.createElement('p');
         p.textContent = todo.todo;
 
+        // Apply line-through if the todo is completed
+        if (todo.completed) {
+            p.style.textDecoration = 'line-through';
+            
+        } else {
+            p.style.textDecoration = 'none';
+        }
+
         // Delete button
         const deleteButton = document.createElement('button');
         deleteButton.textContent = 'X';
@@ -89,10 +97,10 @@ function renderTodos() {
     });
 }
 
-//attach event listener
+// Attach event listener for adding todos
 todoAdd?.addEventListener('click', (e) => {
     e.preventDefault();
-    if(todoInput && todoInput.value.trim() !== ''){
+    if (todoInput && todoInput.value.trim() !== '') {
         addTodo(todoInput.value.trim());
         todoInput.value = '';
     }

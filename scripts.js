@@ -10,19 +10,13 @@ var __assign = (this && this.__assign) || function () {
     return __assign.apply(this, arguments);
 };
 ;
-//grab needed dom elements
+// Grab needed DOM elements
 var todoInput = document.querySelector('.todo_list--form--input');
 var todoAdd = document.querySelector('.todo_list--form--input--submit');
 var todoList = document.querySelector('.todo_list');
-/**
- *const todoInput = document.querySelector('."todo_list--form--input') as HTMLInputElement | null;
-//const todoAdd = document.querySelector('.todo_list--form--input--submit') as HTMLInputElement | null;
-const todoList = document.querySelector('.todo_list') as HTMLUListElement | null;
-
- */
-//create todo array -- stores todo list items
+// Create todo array -- stores todo list items
 var todos = [];
-//add todos function
+// Add todos function
 function addTodo(todo) {
     var newTodo = {
         id: Date.now(),
@@ -32,20 +26,24 @@ function addTodo(todo) {
     todos.push(newTodo);
     renderTodos();
 }
-//remove a todo function
+// Remove a todo function
 function removeTodo(id) {
-    //update todos
+    // Update todos
     todos = todos.filter(function (todo) {
         return todo.id !== id;
     });
     renderTodos();
 }
-//toggle completion function
+// Toggle completion function
 function toggleCompletion(id) {
-    todos.map(function (todo) {
-        todo.id === id ? __assign(__assign({}, todo), { completed: !todo.completed }) : todo;
+    // Update the todo's completed status
+    todos = todos.map(function (todo) {
+        if (todo.id === id) {
+            return __assign(__assign({}, todo), { completed: !todo.completed }); // Toggle completed status
+        }
+        return todo; // Return unmodified todo if it's not the one being toggled
     });
-    renderTodos();
+    renderTodos(); // Re-render the todos
 }
 // Render the list of todos
 function renderTodos() {
@@ -69,6 +67,13 @@ function renderTodos() {
         // Text for the todo item
         var p = document.createElement('p');
         p.textContent = todo.todo;
+        // Apply line-through if the todo is completed
+        if (todo.completed) {
+            p.style.textDecoration = 'line-through';
+        }
+        else {
+            p.style.textDecoration = 'none';
+        }
         // Delete button
         var deleteButton = document.createElement('button');
         deleteButton.textContent = 'X';
@@ -82,7 +87,7 @@ function renderTodos() {
         todoList.appendChild(li);
     });
 }
-//attach event listener
+// Attach event listener for adding todos
 todoAdd === null || todoAdd === void 0 ? void 0 : todoAdd.addEventListener('click', function (e) {
     e.preventDefault();
     if (todoInput && todoInput.value.trim() !== '') {
