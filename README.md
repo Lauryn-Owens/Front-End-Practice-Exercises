@@ -6,9 +6,9 @@ add button to add the todo to the todo list. When a user has completed a task th
 Deployed Link: https://typecripttodo.netlify.app/
 
 Features
-Add New Tasks: Easily add tasks by typing in the input field and pressing enter or clicking the 'Add' button.
-Delete Tasks: Remove tasks you no longer need by clicking the delete icon or button.
-Mark Tasks as Completed: Mark tasks as done by clicking the checkbox next to the task.
+- Add New Tasks: Easily add tasks by typing in the input field and pressing enter or clicking the 'Add' button.
+- Delete Tasks: Remove tasks you no longer need by clicking the delete icon or button.
+- Mark Tasks as Completed: Mark tasks as done by clicking the checkbox next to the task.
 
  ## Technologies Used
 
