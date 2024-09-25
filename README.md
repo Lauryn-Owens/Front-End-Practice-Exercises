@@ -1,2 +1,3 @@
 # Front-End-Practice-Exercises
-Repository contains problem solving frontend web development exercises. Most of the projects are from https://www.frontendmentor.io/challenges.
+This repository contains branches of my completed practice frontend exercises. *** Check out the other branches. ***
+Most of the projects are from https://www.frontendmentor.io/challenges.
