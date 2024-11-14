@@ -1,12 +1,13 @@
 
 import './App.css'
 import ProfileCard from './exerciseOne/profileCard'
+import ResetCounter from './exerciseTwo/resetCounter'
 
 function App() {
 
   return (
     <>
-      <h1 className='text-3xl underline text-center'>React Interview Prep - I am completing practice exercises from
+      <h1 className=' mt-10 text-3xl underline text-center'>React Interview Prep - I am completing practice exercises from
         the basics to intermediate level </h1>
       <main className=' w-10/12 m-auto mt-8 '>
          <h2>Exercise One</h2>
@@ -23,6 +24,15 @@ function App() {
          bio='Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
          />
          </div>
+         <h2 className='mt-8'>Exercise Two</h2>
+         <p>
+         Day 2: useState Hook and Handling Events
+          Topics: useState basics, handling events like clicks and form submissions.
+          Challenge Exercise: Create a “Counter with Reset” component:
+          The counter increments by 1 with a button click, and when the count reaches 10, the button text changes to “Reset.”
+          When clicked, “Reset” sets the count back to zero.
+         </p>
+         <ResetCounter/>
       </main>
     </>
   )

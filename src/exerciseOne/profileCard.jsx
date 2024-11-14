@@ -2,7 +2,12 @@ import React, {useState} from 'react'
 
 function ProfileCard({imgSrc, name, age, bio}) {
     const[profileAge, setProfileAge] = useState(age);
-
+    /**
+     * 1. when the user clicks on the profile card 
+     * their age multiples by 2
+     * 2. The profile card data is provided by props from
+     * its parent component (App)
+     */
   return (
     <main 
     onClick={() => {
