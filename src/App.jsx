@@ -2,6 +2,7 @@
 import './App.css'
 import ProfileCard from './exerciseOne/profileCard'
 import ResetCounter from './exerciseTwo/resetCounter'
+import RandomTodo from './exerciseThree/randomTodo'
 
 function App() {
 
@@ -33,6 +34,15 @@ function App() {
           When clicked, “Reset” sets the count back to zero.
          </p>
          <ResetCounter/>
+         <h2 className='mt-8'>Exercise Three</h2>
+         <p>
+         Day 3: useEffect Hook and Basic API Fetching
+        Topics: useEffect for side effects, simple API calls.
+        Challenge Exercise: Build a “Random Todo Generator” component that:
+        Fetches a random todo from an API every time you click a button.
+        Shows “Loading…” while fetching.
+         </p>
+         <RandomTodo/>
       </main>
     </>
   )
