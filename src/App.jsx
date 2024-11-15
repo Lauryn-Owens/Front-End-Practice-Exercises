@@ -3,6 +3,7 @@ import './App.css'
 import ProfileCard from './exerciseOne/profileCard'
 import ResetCounter from './exerciseTwo/resetCounter'
 import RandomTodo from './exerciseThree/randomTodo'
+import ThemeToggler from './exerciseFour/themeToggler';
 
 function App() {
 
@@ -43,6 +44,17 @@ function App() {
         Shows “Loading…” while fetching.
          </p>
          <RandomTodo/>
+
+         <h2>Exercise Four</h2>
+         <p>
+         Day 4: Context API and Prop Drilling Solution
+        Topics: Context API, solving prop drilling with context.
+        Challenge Exercise: Make a “Theme Toggle” application:
+        Set up a context for light/dark themes.
+        Toggle the theme from a button in one component, but apply the theme colors across multiple nested components.
+                </p>
+         <ThemeToggler/>
+         <p className='mt-8'>Last Exercise on this particular web applications -- going to do practice exercises individually now</p>
       </main>
     </>
   )
