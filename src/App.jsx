@@ -4,6 +4,7 @@ import ProfileCard from './exerciseOne/profileCard'
 import ResetCounter from './exerciseTwo/resetCounter'
 import RandomTodo from './exerciseThree/randomTodo'
 import ThemeToggler from './exerciseFour/themeToggler';
+import UseReducerCounter from './exerciseFive/useReducerCounter';
 
 function App() {
 
@@ -55,6 +56,14 @@ function App() {
                 </p>
          <ThemeToggler/>
          <p className='mt-8'>Last Exercise on this particular web applications -- going to do practice exercises individually now</p>
+          <h2>Exercise Five</h2>
+          <p>
+          Day 5: Counter with useReducer
+          Topics: State transitions, actions, and useReducer.
+          Challenge Exercise: Build a counter that increments, decrements, resets, and supports custom step values.
+          </p>
+          <UseReducerCounter/>
+          
       </main>
     </>
   )
