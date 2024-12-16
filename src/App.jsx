@@ -1,12 +1,22 @@
 import './App.css'
-import Step from './components/form/stepsSidebar/step'
+import Form from './components/form/form/form'
+import StepsSidebar from './components/form/stepsSidebar/stepsSidebar'
+
+
 
 function App() {
 
   return (
-    <>
-     <h1>I lost my old code now i have to start over</h1>
-    </>
+   <div className="bg-slate-100">
+        <main className='flex'>
+        <div className='w-6/12'>
+            <StepsSidebar/>
+        </div>
+        <div className='w-11/12 bg-white'>
+            <Form/>
+        </div>
+      </main>
+   </div>
   )
 }
 
